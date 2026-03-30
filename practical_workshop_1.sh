@@ -10,4 +10,4 @@ sudo apt install parted
  sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e
 #This command displays detailed information about the partitions and file system of all connected disks, using parted for the physical structure and lsblk for the format and mount points.
  [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
- #This command is used to check if the system is in BIOS or UEDI mode.
+ #This command is used to check if the system is in BIOS or UEFI mode.
