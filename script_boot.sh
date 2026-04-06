@@ -10,3 +10,5 @@
 #925541 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:33 .
 #918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:33 ..
 
+# stat . Help me get the complete information for a file.
+ 
