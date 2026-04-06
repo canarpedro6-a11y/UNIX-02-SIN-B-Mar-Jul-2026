@@ -12,3 +12,6 @@
 
 # stat . Help me get the complete information for a file.
  
+ # mkdir -p /tmp/preuba/sub1 /tmp/prueba/sub2 Creates directories recursively, generating parent folders if they do not exist, to establish the "sub1" and "sub2" paths simultaneously.
+ # stat /tmp/prueba Displays detailed information and status of a file or directory, including size, permissions, access and creation dates, and system identifiers.
+ # man mkdir Open the mkdir command user manual to view its complete documentation, available options, and usage syntax.
