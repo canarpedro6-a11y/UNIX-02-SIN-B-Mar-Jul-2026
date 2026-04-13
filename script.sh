@@ -10,5 +10,8 @@ rm -- -rf   Permanently deletes a specific file that is literally called -rf
 rmdir -- -rf  Deletes an empty directory that has the literal name -rf.
 
 ls --help do a litle resmuen only in one part of the screm 
-man ls open the manual of usse
+man ls open the manual of usse 
 
+ --depth <depth>
+           Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless --no-single-branch is given to fetch the
+           histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
