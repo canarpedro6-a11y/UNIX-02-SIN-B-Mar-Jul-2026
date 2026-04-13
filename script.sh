@@ -9,5 +9,6 @@ ls -ah   Borra un directorio de forma recursiva y forzada, ignorando archivos in
 rm -- -rf   Permanently deletes a specific file that is literally called -rf
 rmdir -- -rf  Deletes an empty directory that has the literal name -rf.
 
-
+ls --help do a litle resmuen only in one part of the screm 
+man ls open the manual of usse
 
