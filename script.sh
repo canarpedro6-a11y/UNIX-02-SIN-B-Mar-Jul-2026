@@ -15,3 +15,8 @@ man ls open the manual of usse
  --depth <depth>
            Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless --no-single-branch is given to fetch the
            histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
+
+chmod +x script.sh  Grants execution permissions to all user levels (owner, group, and others).
+chmod u+x script.sh Grants execution permission exclusively to the file owner.
+chmod o-r script.sh  He revoked read permission for users who do not belong to the owner's group ("others").
+chmod u+rw,go-rwx script.sh  Assign read and write permissions to the owner, while removing any access (read, write and execute) to the group and third parties.
