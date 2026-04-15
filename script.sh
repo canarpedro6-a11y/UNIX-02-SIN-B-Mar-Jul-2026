@@ -23,3 +23,6 @@ chmod u+rw,go-rwx script.sh  #Assign read and write permissions to the owner, wh
 
 sduo echo "hola" > /etc/archivo_protegido #this command it can be done because we have only one sudo for one part and we need a second sudo for the other part
 
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #in this command you create one file that inside is write hello but in terminal don´t show but create the archive
+echo "hola" | sudo tee /etc/archivo_protegido #in this command sample the word hello in the teminal
+
