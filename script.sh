@@ -29,6 +29,9 @@ echo "hola" | sudo tee /etc/archivo_protegido #in this command sample the word h
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido  # we use this command add content in a archive that already exist
 sudo su - # we use only in necessary cases because can do differents commands can bes broke the server
 
+echo '$HOME'  #is a variable that show on the same in the terminal
+echo "$HOME"  #sample directory
+
 
 
 
