@@ -37,6 +37,12 @@ echo 'echo "hola desde mi primer script"' >> hola.sh # Add to the end of the exi
 cat hola.sh #Display the complete contents of the file you just created in the terminal.
 ./hola.sh #Display the complete contents of the file you just created in the terminal.
 
+ls -l hola.sh #It displays the file details (permissions, owner, size) to verify that it initially does not have execute permissions.
+chmod +x hola.sh #Modify the file permissions to add execute permission (+x), allowing the system to run it as a program.
+ls -l hola.sh #This is repeated to visually confirm that the permissions have changed (you should now see an x ​​in the permission string, for example: -rwxr-xr-x).
+./hola.sh #Run the script now that you have the necessary permissions.
+
+
 
 
 
