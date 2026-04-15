@@ -42,6 +42,10 @@ chmod +x hola.sh #Modify the file permissions to add execute permission (+x), al
 ls -l hola.sh #This is repeated to visually confirm that the permissions have changed (you should now see an x ​​in the permission string, for example: -rwxr-xr-x).
 ./hola.sh #Run the script now that you have the necessary permissions.
 
+ls/etc # Lists the contents of the /etc directory. This directory is usually readable by any user, so sudo is not typically required.
+sudo  touch /etc/prueba.txt #this command need sudo beecause use touch
+mkdir ~/mi_carpeta # Create a folder called my_folder in your home directory (~). You don't need sudo because you have full control over your own user folder.
+sudo apt isntall cowsay #in this case also because use need for install something
 
 
 
