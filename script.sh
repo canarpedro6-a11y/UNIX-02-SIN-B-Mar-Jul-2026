@@ -20,3 +20,6 @@ chmod +x script.sh  Grants execution permissions to all user levels (owner, grou
 chmod u+x script.sh  Grants execution permission exclusively to the file owner.
 chmod o-r script.sh   He revoked read permission for users who do not belong to the owner's group ("others").
 chmod u+rw,go-rwx script.sh  #Assign read and write permissions to the owner, while removing any access (read, write and execute) to the group and third parties.
+
+sduo echo "hola" > /etc/archivo_protegido #this command it can be done because we have only one sudo for one part and we need a second sudo for the other part
+
