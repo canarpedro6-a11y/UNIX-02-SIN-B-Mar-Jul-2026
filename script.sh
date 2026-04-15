@@ -26,3 +26,11 @@ sduo echo "hola" > /etc/archivo_protegido #this command it can be done because w
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null #in this command you create one file that inside is write hello but in terminal don´t show but create the archive
 echo "hola" | sudo tee /etc/archivo_protegido #in this command sample the word hello in the teminal
 
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido  # we use this command add content in a archive that already exist
+sudo su - # we use only in necessary cases because can do differents commands can bes broke the server
+
+
+
+
+
+
