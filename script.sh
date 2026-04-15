@@ -32,6 +32,16 @@ sudo su - # we use only in necessary cases because can do differents commands ca
 echo '$HOME'  #is a variable that show on the same in the terminal
 echo "$HOME"  #sample directory
 
+echo '#!/bin/sh' > hola.sh #Create the file (or overwrite its contents) by inserting the header line that indicates which command interpreter to use.
+echo 'echo "hola desde mi primer script"' >> hola.sh # Add to the end of the existing file the command needed to print a greeting on the screen.
+cat hola.sh #Display the complete contents of the file you just created in the terminal.
+./hola.sh #Display the complete contents of the file you just created in the terminal.
+
+
+
+
+
+
 
 
 
