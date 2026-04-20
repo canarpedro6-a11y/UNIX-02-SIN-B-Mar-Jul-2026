@@ -1,4 +1,4 @@
-  1  git remote -v
+ 1  git remote -v
     2  git fetch upstream
     3  git checkout -b eval_p2_1_v1 upstream/eval_p2_1_v1
     4  git push -u origin eval_p2_1_v1
@@ -64,3 +64,19 @@
    64  git add .
    65  git commit -m "Fix problema 6: sticky bit en /tmp/nebula_zone"
    66  history
+   67  clear
+   68  gpg --batch --generate-key <<EOF
+Key-Type: RSA
+Key-Length: 3072
+Name-Real: aurora
+Name-Email: aurora@nebula.lab
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+
+   69  gpg --encrypt --recipient aurora@nebula.lab nebula/bitacoras/cosmos.txt
+   70  ls nebula/bitacoras/
+   71  git add .
+   72  git commit -m "Fix problema 7: llave GPG generada y cosmos.txt cifrado"
+   73  history
