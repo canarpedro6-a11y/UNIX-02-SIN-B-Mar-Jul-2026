@@ -80,6 +80,9 @@ chgrp grupo_test luna
 chgrp grupo_test comun
 ls -l comun
 
+sudo chown luna:grupo_test mi_archivo
+ls -l mi_archivo
+
 
 
 
