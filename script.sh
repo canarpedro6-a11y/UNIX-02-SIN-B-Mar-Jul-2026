@@ -66,7 +66,12 @@ mkdir privado
  sudo chown -R $(whoami) .
  sudo setfacl -bnR .
 
-
+whoami
+echo "hola" > mi_archivo
+ ls -l mi_archivo
+useradd -m -s /usr/bin/zsh luna
+chown luna mi_archivo
+ls -l mi_archivo
 
 
 
