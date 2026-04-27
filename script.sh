@@ -53,25 +53,32 @@ touch archivo1 #crate a documents
 mkdir archivvo1 # create a repository
 ls -l #look the documents
 
-ummask 027 #
-touch archivo2
-mkdir archivo2
+ummask 027 #change the mask
+touch archivo2 # create the file
+mkdir archivo2 #create repository
 
-umask 077
-touch secreto.txt
-mkdir privado
+umask 077 #change the mask
+touch secreto.txt #create a file
+mkdir privado #create a repository
 
- sudo apt-get update
- sudo apt-get install acl
- sudo chown -R $(whoami) .
- sudo setfacl -bnR .
-
+ sudo apt-get update #Refreshes the local package index to reflect the latest versions of available software from the repositories.
+ sudo apt-get install acl #: Installs the Access Control List utility, which allows for more granular file system permissions.
+ sudo chown -R $(whoami) . # Recursively changes the owner of the current directory and all its contents to the currently logged-in user.
+ sudo setfacl -bnR . #Recursively removes all extended Access Control List entries and restores standard permissions for the current directory.
+ 
 whoami
-echo "hola" > mi_archivo
- ls -l mi_archivo
-useradd -m -s /usr/bin/zsh luna
-chown luna mi_archivo
-ls -l mi_archivo
+echo "hola" > mi_archivo #mi_archivo: Creates a file named "mi_archivo" (or overwrites it) and writes the string "hola" into it.
+ ls -l mi_archivo #Lists the details of "mi_archivo," including permissions, owner, size, and modification date in a long format.
+useradd -m -s /usr/bin/zsh luna # Creates a new user named "luna" with a home directory and sets the default shell to Zsh.
+chown luna mi_archivo # Changes the ownership of the file "mi_archivo" to the user "luna."
+ls -l mi_archivo #
+
+
+sudo newgrp grupo_test
+groups
+chgrp grupo_test luna
+chgrp grupo_test comun
+ls -l comun
 
 
 
