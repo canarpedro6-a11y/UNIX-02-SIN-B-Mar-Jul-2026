@@ -48,6 +48,28 @@ mkdir ~/mi_carpeta # Create a folder called my_folder in your home directory (~)
 sudo apt isntall cowsay #in this case also because use need for install something
 
 
+umask #show the mask of opetaive system
+touch archivo1 #crate a documents
+mkdir archivvo1 # create a repository
+ls -l #look the documents
+
+ummask 027 #
+touch archivo2
+mkdir archivo2
+
+umask 077
+touch secreto.txt
+mkdir privado
+
+ sudo apt-get update
+ sudo apt-get install acl
+ sudo chown -R $(whoami) .
+ sudo setfacl -bnR .
+
+
+
+
+
 
 
 
