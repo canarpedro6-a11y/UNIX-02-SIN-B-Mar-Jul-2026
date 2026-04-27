@@ -74,14 +74,14 @@ chown luna mi_archivo # Changes the ownership of the file "mi_archivo" to the us
 ls -l mi_archivo #
 
 
-sudo newgrp grupo_test
-groups
-chgrp grupo_test luna
-chgrp grupo_test comun
-ls -l comun
+sudo newgrp grupo_test # Switches the current primary group of the shell session to "grupo_test" using root privileges
+groups # Displays the list of groups the current user belongs to.
+chgrp grupo_test luna # Changes the group ownership of the file or directory named "luna" to "grupo_test".
+chgrp grupo_test comun # Changes the group ownership of the file or directory named "comun" to "grupo_test".
+ls -l comun # Displays detailed information (permissions, owner, group, etc.) for the file or directory named "comun".
 
-sudo chown luna:grupo_test mi_archivo
-ls -l mi_archivo
+sudo chown luna:grupo_test mi_archivo # Changes both the owner to "luna" and the group to "grupo_test" for the file "mi_archivo" using root privileges.
+ls -l mi_archivo 
 
 
 
