@@ -83,6 +83,11 @@ ls -l comun # Displays detailed information (permissions, owner, group, etc.) fo
 sudo chown luna:grupo_test mi_archivo # Changes both the owner to "luna" and the group to "grupo_test" for the file "mi_archivo" using root privileges.
 ls -l mi_archivo 
 
+mkdir -p proyecto/sub
+touch proyecto/readme proyecto/sub/datos
+sudo chown -R luna:group_test proyecto
+ls -IR proyecto
+
 
 
 
