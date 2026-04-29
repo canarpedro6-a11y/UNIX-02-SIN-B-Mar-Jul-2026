@@ -219,10 +219,15 @@ RUN git config --system --add safe.directory '*' \
 # definida para que la imagen sea usable también con Docker puro.
 # Prompt del curso para bash
 RUN cat >> /root/.bashrc <<'EOF'
+# Aquí puedes poner un prompt para bash si quieres
+PS1='\[\e[36m\][Analista-UIDE]\[\e[m\] \w \$ '
+EOF
 
 RUN chsh -s /usr/bin/zsh root
+
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Analista-UIDE]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗)%f %# '
 EOF
+
 CMD ["/usr/bin/zsh"]
 
