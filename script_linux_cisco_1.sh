@@ -18,6 +18,11 @@ ls -l /var/log/ #For detailed information about the files, such as file type, pe
 ls -r /var/log/ #the list of files in reverse alphabetical order
 su - #temporarily act as a different user
 ls -l script_linux_cisco_1 #It includes information about your permits.
+cat hola.txt #view the contents of my file
+head hola.txt #To view only the first few lines of the previous result for the file
+tail hola.txt #view the last lines of the file
+
+
 
 
 
