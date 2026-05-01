@@ -22,6 +22,7 @@ cat hola.txt #view the contents of my file
 head hola.txt #To view only the first few lines of the previous result for the file
 tail hola.txt #view the last lines of the file
 cp #The cp command is used to copy files.
+dd #The dd command uses special arguments to specify how it will work
 
 
 
