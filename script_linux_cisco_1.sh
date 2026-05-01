@@ -14,6 +14,8 @@ cd wokspace #change directory
 cd UNIX-02-SIN-B-Mar-Jul-2026 #change directory
 cd .. #It moves you up one level in the folder hierarchy, returning to the parent directory.
 cd ~ #It takes you directly to the current user's home folder, no matter where you are in the system.
+ls -l /var/log/ #For detailed information about the files, such as file type, permissions, and properties
+ls -r /var/log/ #the list of files in reverse alphabetical order
 
 
 
