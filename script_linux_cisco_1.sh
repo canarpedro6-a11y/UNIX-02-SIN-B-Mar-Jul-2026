@@ -17,6 +17,7 @@ cd ~ #It takes you directly to the current user's home folder, no matter where y
 ls -l /var/log/ #For detailed information about the files, such as file type, permissions, and properties
 ls -r /var/log/ #the list of files in reverse alphabetical order
 su - #temporarily act as a different user
+ls -l script_linux_cisco_1 #It includes information about your permits.
 
 
 
