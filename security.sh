@@ -8,3 +8,5 @@ id -u #A command that prints the numeric effective user ID of the current user.
 id -g #A command that prints the numeric effective group ID of the current user.
 id -G #A command that prints all numeric group IDs (including supplementary groups) that the current user belongs to.
 
+cat /etc/gshadow #A command that displays the secure group account information, which contains encrypted group passwords and administrative details.
+cat /etc/group | grep codespace #does not exist
