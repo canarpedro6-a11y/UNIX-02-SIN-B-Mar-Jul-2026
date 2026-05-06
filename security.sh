@@ -28,4 +28,9 @@ addgroup --gid 2100 marketing #add a new group
 addgroup --system cache_web #add a new group
 grep "diseno\|marketing\|cache_web" /etc/group #verify the groups                                              
 
+groups #in what group i am
+id #in what group i am
+sudo usermod -aG desarolladores root #we change the final part because the user don´t have nothing for our user root 
+ssudo usermod -aG diseno root #we change the final part because the user don´t have nothing for our user root
+
 
