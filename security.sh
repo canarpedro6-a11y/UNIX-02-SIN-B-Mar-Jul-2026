@@ -49,4 +49,7 @@ touch ~/lab_chgrp/proyectos/config.json #Creates an empty configuration file nam
 ouch ~/lab_chgrp/reportes/inforne.txt #Repeats the typo ouch while attempting to create a text file named informe.txt inside the reportes subdirectory.
 touch ~/lab_chgrp/scripts/deploy.sh   #Creates an empty shell script file named deploy.sh inside the scripts subdirectory.
 
+ls -la ~/lab_chgrp/proyectos/ #Lists all contents of the proyectos directory in a long format, including hidden files and detailed metadata such as permissions and ownership.
+ls -la ~/lab_chgrp/reportes/ #Performs a detailed list of all files and hidden items within the reportes directory.
 
+chgrp desarolladores ~/lab_chgrp/proyectos/app.py #Changes the group ownership of the file app.py to the group named desarolladores.
