@@ -43,4 +43,10 @@ usermod -aG grupo_temporal root #Appends the user "root" to the "grupo_temporal"
 id root #Displays the user and group IDs (UID and GIDs) for the "root" account to verify its current memberships
 usermod -G desarolladores root #Sets "desarrolladores" as the only secondary group for "root," removing them from all other secondary groups like "grupo_temporal."
                                                                                
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts} #Creates a main directory named lab_chgrp in the home folder and simultaneously generates three subdirectories inside it:
+ouch ~/lab_chgrp/proyectos/app.py  #Attempts to create a file named app.py, but contains a typo (ouch instead of touch), which will result in a "command not found" error.
+touch ~/lab_chgrp/proyectos/config.json #Creates an empty configuration file named config.json within the proyectos subdirectory.
+ouch ~/lab_chgrp/reportes/inforne.txt #Repeats the typo ouch while attempting to create a text file named informe.txt inside the reportes subdirectory.
+touch ~/lab_chgrp/scripts/deploy.sh   #Creates an empty shell script file named deploy.sh inside the scripts subdirectory.
+
 
