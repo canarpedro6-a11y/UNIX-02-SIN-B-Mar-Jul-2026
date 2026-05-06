@@ -17,3 +17,9 @@ ls -la ~/proyecto_unix/ #A command that lists all files and subdirectories insid
 sudo groupadd desarolladores #crete a simple group
 sudo groupadd -g 2000 operaciones 
 sudo groupadd --system servicios_web #group of system
+
+ grep "desarolladores\|operaciones\|servicios_web" /etc/group #show the groups
+ grep -E "desarolladores|operaciones|servicios_web" /etc/group #show the groups
+
+ grep "GID_MIN|GID_MAX\|SYS_GID" /etc/login.defs #configuration file to display the range of Group IDs (GIDs) used for regular and system accounts.
+
