@@ -14,3 +14,6 @@ cat /etc/group | grep codespace #does not exist
 mkdir ~/proyecto_unix/ #A command that creates a new directory named "proyecto_unix" within the current user's home directory.
 ls -la ~/proyecto_unix/ #A command that lists all files and subdirectories inside "proyecto_unix" in a long format, including hidden files and detailed permission information.
  
+sudo groupadd desarolladores #crete a simple group
+sudo groupadd -g 2000 operaciones 
+sudo groupadd --system servicios_web #group of system
