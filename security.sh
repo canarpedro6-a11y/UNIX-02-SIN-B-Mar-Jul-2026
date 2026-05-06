@@ -53,3 +53,11 @@ ls -la ~/lab_chgrp/proyectos/ #Lists all contents of the proyectos directory in 
 ls -la ~/lab_chgrp/reportes/ #Performs a detailed list of all files and hidden items within the reportes directory.
 
 chgrp desarolladores ~/lab_chgrp/proyectos/app.py #Changes the group ownership of the file app.py to the group named desarolladores.
+
+ chgrp diseno ~/lab_chgrp/proyectos/config.json ~/lab_chgrp/reportes/informe.txt #: Changes the group ownership of both the config.json and informe.txt files to the group named diseno.
+ ls -la ~/lab_chgrp/proyectos/ #Lists all contents of the proyectos directory in long format, showing hidden files and detailed metadata (permissions, owner, group).
+ ls -la ~/labb_chgrp/reportes/ #Attempts to list the contents of the reportes directory but contains a typo (labb_chgrp instead of lab_chgrp), which will likely result in a "No such file or directory" error.
+
+ls -laR ~/lab_chgrp/scripts #Recursively lists all files and subdirectories within the scripts folder in long format, including hidden items.
+ chgrp -R desarolladores ~/lab_chgrp/scripts/ #Recursively changes the group ownership of the scripts directory and all files/folders inside it to the group desarolladores.
+  chgrp -Rv diseno ~/lab_chgrp/reportes/ #Recursively changes the group ownership of the reportes directory and its contents to diseno, while using the -v (verbose) flag to output a confirmation message for every file processed.
