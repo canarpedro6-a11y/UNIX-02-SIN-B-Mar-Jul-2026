@@ -33,4 +33,8 @@ id #in what group i am
 sudo usermod -aG desarolladores root #we change the final part because the user don´t have nothing for our user root 
 ssudo usermod -aG diseno root #we change the final part because the user don´t have nothing for our user root
 
+grep -E "desarolladores|diseno" /etc/group
+sudo adduser root marketing #add new group in the user
+id root #who is my id
+grep root /etc/group #separate the groups
 
