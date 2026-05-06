@@ -23,3 +23,9 @@ sudo groupadd --system servicios_web #group of system
 
  grep "GID_MIN|GID_MAX\|SYS_GID" /etc/login.defs #configuration file to display the range of Group IDs (GIDs) used for regular and system accounts.
 
+ addgroup diseno #create a new group
+addgroup --gid 2100 marketing #add a new group
+addgroup --system cache_web #add a new group
+grep "diseno\|marketing\|cache_web" /etc/group #verify the groups                                              
+
+
