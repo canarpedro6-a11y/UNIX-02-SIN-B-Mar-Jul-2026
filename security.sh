@@ -38,3 +38,9 @@ sudo adduser root marketing #add new group in the user
 id root #who is my id
 grep root /etc/group #separate the groups
 
+sudo groupadd grupo_temporal #Creates a new group named "grupo_temporal" in the system using administrative privileges.
+usermod -aG grupo_temporal root #Appends the user "root" to the "grupo_temporal" group without removing them from their existing groups.
+id root #Displays the user and group IDs (UID and GIDs) for the "root" account to verify its current memberships
+usermod -G desarolladores root #Sets "desarrolladores" as the only secondary group for "root," removing them from all other secondary groups like "grupo_temporal."
+                                                                               
+
