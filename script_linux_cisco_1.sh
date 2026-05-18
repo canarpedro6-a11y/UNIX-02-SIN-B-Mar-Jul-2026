@@ -54,6 +54,8 @@ cp #The cp command is used to copy files.
 cd -/documents #Navigates the terminal directly to the "documents" folder located inside the user's home directory.
 mv #Moves or renames files and directories from one location in the file system to another.
 rm #Removes or permanently deletes specified files or directories from the file system.
+#PART 11.1
+dd #A command utility used for copying and converting files, low-level data cloning, or creating disk images, followed by an incomplete comment symbol.
 
 
 
