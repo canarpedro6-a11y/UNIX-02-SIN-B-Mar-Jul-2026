@@ -51,5 +51,6 @@
    47  chmod o-w estrella.conf
    48  git add .
    49  git commit -m "Fix problema 4: permisos simbolicos corregidos recperacion"
-   50 
-   51 
+   50 #PROBLEMA 5
+   chmod u+s bitacoras/galaxia.sh
+   
