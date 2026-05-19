@@ -56,3 +56,6 @@
    ls -l bitacoras/galaxia.sh
    git add .
    git commit -m "Fix problema 5: SUID activado en galaxia.sh recuperacion"
+   #PROBLEMA 6
+   chmod 640 bitacoras/estrella.conf
+   ls -l bitacoras/estrella.conf
