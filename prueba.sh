@@ -61,4 +61,7 @@
    sudo chmod 777 /tmp/nebula_zone
    sudo chmod +t /tmp/nebula_zone
    ls -ld /tmp/nebula_zone
-
+   #PROBLEMA 7
+   gpg --generate-key
+   gpg --encrypt --recipient aurora@nebula.lab --output bitacoras/cosmos.txt.gpg bitacoras/cosmos.txt
+   
