@@ -64,4 +64,7 @@
    #PROBLEMA 7
    gpg --generate-key
    gpg --encrypt --recipient aurora@nebula.lab --output bitacoras/cosmos.txt.gpg bitacoras/cosmos.txt
-   
+   #PROBLEMA 8
+   gpg --local-user aurora@nebula.lab --clearsign --output bitacoras/estrella.conf.asc bitacoras/estrella.conf
+   gpg --verify bitacoras/galaxia.sh.sig bitacoras/galaxia.sh
+
