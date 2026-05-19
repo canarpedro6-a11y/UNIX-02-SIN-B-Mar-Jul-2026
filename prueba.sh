@@ -57,5 +57,8 @@
    git add .
    git commit -m "Fix problema 5: SUID activado en galaxia.sh recuperacion"
    #PROBLEMA 6
-   chmod 640 bitacoras/estrella.conf
-   ls -l bitacoras/estrella.conf
+   sudo mkdir -p /tmp/nebula_zone
+   sudo chmod 777 /tmp/nebula_zone
+   sudo chmod +t /tmp/nebula_zone
+   ls -ld /tmp/nebula_zone
+
