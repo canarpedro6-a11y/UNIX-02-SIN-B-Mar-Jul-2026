@@ -53,4 +53,6 @@
    49  git commit -m "Fix problema 4: permisos simbolicos corregidos recperacion"
    50 #PROBLEMA 5
    chmod u+s bitacoras/galaxia.sh
-   
+   ls -l bitacoras/galaxia.sh
+   git add .
+   git commit -m "Fix problema 5: SUID activado en galaxia.sh recuperacion"
