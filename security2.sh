@@ -21,3 +21,8 @@ id -gn #Prints the name of the effective primary group to confirm it has reverte
 echo "PID del shell actual: $$" #Prints the Process ID (PID) of the active shell session before changing groups.
 newgrp desarolladores #Opens a new subshell session with the effective primary group set to "desarolladores".
 echo "PID dentro de newgrp: $$" #Prints the Process ID inside the new session, which will match the original PID because newgrp replaces the current shell image using exec.
+
+sudo groupadd grupo_restringido #Creates a new system group named "grupo_restringido" using administrative privileges.
+sudo gpasswd grupo_restringido #Sets a password for the "grupo_restringido" group, allowing users who are not members to temporarily join it.
+newgrp grupo_restringido #Switches the user's current effective primary group to "grupo_restringido", prompting for the group password if the user is not an explicit member.
+id -gn #Prints the name of the active effective primary group to confirm the switch to "grupo_restringido" was successful.
