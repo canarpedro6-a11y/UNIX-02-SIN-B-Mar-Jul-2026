@@ -18,3 +18,6 @@ ls -la ~/ #Lists all contents, hidden files, permissions, and ownership details 
 exit #Closes the current subshell session created by the newgrp command, reverting back to the previous primary group environment.
 id -gn #Prints the name of the effective primary group to confirm it has reverted to the original group prior to running newgrp. 
 
+echo "PID del shell actual: $$" #Prints the Process ID (PID) of the active shell session before changing groups.
+newgrp desarolladores #Opens a new subshell session with the effective primary group set to "desarolladores".
+echo "PID dentro de newgrp: $$" #Prints the Process ID inside the new session, which will match the original PID because newgrp replaces the current shell image using exec.
