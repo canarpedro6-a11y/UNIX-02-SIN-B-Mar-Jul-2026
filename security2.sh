@@ -15,3 +15,6 @@ ls -la ~/dentro_de_newgrp.txt #Displays detailed permissions and ownership info 
 mkdir -p ~/proyecto_dev/src #Creates the proyecto_dev directory and its nested src subdirectory simultaneously, skipping errors if they already exist.
 ls -la ~/ #Lists all contents, hidden files, permissions, and ownership details for everything inside the home directory.
 
+exit #Closes the current subshell session created by the newgrp command, reverting back to the previous primary group environment.
+id -gn #Prints the name of the effective primary group to confirm it has reverted to the original group prior to running newgrp. 
+
