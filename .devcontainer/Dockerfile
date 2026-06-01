@@ -220,13 +220,13 @@ RUN git config --system --add safe.directory '*' \
 # Prompt del curso para bash
 RUN cat >> /root/.bashrc <<'EOF'
 # Aquí puedes poner un prompt para bash si quieres
-PS1='\[\e[36m\][Analista-UIDE]\[\e[m\] \w \$ '
+PS1='\[\e[36m\][Pedro-Canar]\[\e[m\] \w \$ '
 EOF
 
 RUN chsh -s /usr/bin/zsh root
 
 RUN cat >> /root/.zshrc <<'EOF'
-PROMPT='%F{cyan}[Analista-UIDE]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗)%f %# '
+PROMPT='%F{cyan}[Pedro-Canar]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗)%f %# '
 EOF
 
 CMD ["/usr/bin/zsh"]
