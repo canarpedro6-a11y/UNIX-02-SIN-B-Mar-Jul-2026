@@ -139,9 +139,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # === Cliente HTTP más legible que curl para aprender ===
     httpie \
     \
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
+# System Localization:
+# This command uses 'sed' to perform an inline stream substitution in the configuration 
+# file, uncommenting the Spanish UTF-8 locale layout (Ref: BHB Ch. 2). Then, 
+# 'locale-gen' compiles these settings so the operating system can natively process 
+# and render Spanish language encoding and characters.
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
