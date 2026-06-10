@@ -191,8 +191,19 @@ RUN cat >> /root/.bashrc <<'EOF'
 PS1='\[\e[36m\][Analista-UIDE]\[\e[m\] \w \$ '
 EOF
 
+# User Default Shell Mutation:
+# This instruction executes 'chsh' (change shell) to permanently modify the 
+# configuration of the root account. It replaces the default Bash interpreter 
+# with ZSH for all future interactive runtime sessions inside the container (Ref: BHB Ch. 1).
 RUN chsh -s /usr/bin/zsh root
 
+# Heredoc Redirection & Terminal Profile Customization:
+# This structure employs a 'Here Document' (Heredoc) to safely append continuous,
+# multi-line configuration rules directly into the user's terminal profile (~/.zshrc) 
+# without needing an interactive file editor (Ref: BHB Ch. 1). The target string 
+# modifies the systemic dynamic prompt environment variable to display specific colors 
+# and structural metadata, such as execution status indicators, which optimizes terminal 
+# readability for security auditing tasks (Ref: BHB Ch. 2).
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Analista-UIDE]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗)%f %# '
 EOF
