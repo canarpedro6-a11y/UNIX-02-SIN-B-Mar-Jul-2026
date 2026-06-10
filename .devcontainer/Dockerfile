@@ -40,23 +40,20 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 
 
 # ----------------------------------------------------------------------------
-# RUN: ejecutar comandos durante la construcción de la imagen
-# ----------------------------------------------------------------------------
-# Aquí instalamos TODO el software del curso en un solo RUN.
-#
-#   apt-get update          -> actualiza la lista de paquetes disponibles
-#   apt-get install         -> descarga e instala los paquetes listados
-#     -y                    -> responde "sí" automáticamente
-#     --no-install-recommends -> instala SOLO lo esencial (no los extras
-#                                sugeridos). Ahorra cientos de MB.
-#
-# ¿Por qué un solo RUN gigante y no 10 RUN pequeños?
-# Porque CADA RUN crea una capa nueva en la imagen. Menos capas = imagen
-# más pequeña, más rápida de construir y de descargar.
-#
-# El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
-# terminó bien. Si algo falla, el build se detiene con error (que es lo
-# que queremos: mejor un error claro que una imagen rota).
+# Package Management and Control Operators (Block e):
+# - apt-get update vs install: 'update' syncs the local package indexes with remote 
+#   repositories, while 'install' pulls and installs the physical binaries (Ref: BHB Ch. 3).
+# - Flags -y and --no-install-recommends: '-y' automatically answers yes to prompts 
+#   for headless automation. '--no-install-recommends' avoids optional files to save space.
+# - Chaining via '&&' and '\': The '&&' control operator runs the next command only 
+#   if the previous one returns an exit code of 0 (success) (Ref: BHB Ch. 1). The 
+#   backslash '\' splits a massive instruction into multiple readable lines.
+# - Single RUN efficiency: Bundling updates, installations, and cleanup into a single 
+#   RUN instruction minimizes the generation of heavy intermediate Docker storage layers.
+# - System Utilities: 'grep' parses streams using regex patterns, 'sed' and 'gawk' 
+#   handle text processing and inline alterations, while 'nmap' and 'tcpdump' discover 
+#   hosts and intercept raw network traffic (Ref: BHB Ch. 2 & Ch. 3).
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
     # === Editores de texto y shells (intérpretes de comandos) ===
@@ -157,20 +154,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 
 # ----------------------------------------------------------------------------
-# SHELL: qué intérprete usar en los siguientes RUN
-# ----------------------------------------------------------------------------
-# Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
-# cambiamos a bash por si agregamos más instrucciones con sintaxis
-# moderna (arrays, [[ ]], etc.).
+#Shell Selection
+# This forces Docker to execute subsequent build commands using '/bin/bash' instead 
+# of the legacy standalone '/bin/sh'. Bash supports robust features like arrays, 
+# structured control operators, and advanced scripting logic (Ref: BHB Ch. 1).
+#
 SHELL ["/bin/bash", "-c"]
 
 
 # ----------------------------------------------------------------------------
-# WORKDIR: directorio de trabajo al entrar al contenedor
-# ----------------------------------------------------------------------------
-# Codespaces siempre monta el código del repositorio en
-# /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
-# terminales se abran cerca de nuestros archivos del curso.
+# # 'WORKDIR' creates and declares the default active path inside the container. All 
+# following operations, builds, and runtime terminals start inside this directory.S
 WORKDIR /workspaces
 
 # Configuración de Git para el contenedor:
