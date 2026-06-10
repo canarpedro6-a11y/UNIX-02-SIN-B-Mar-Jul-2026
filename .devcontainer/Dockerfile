@@ -29,12 +29,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 
 # ----------------------------------------------------------------------------
-# Pre-respuesta a una pregunta interactiva de Wireshark
-# ----------------------------------------------------------------------------
-# Wireshark/tshark PREGUNTA durante su instalación si los usuarios
-# normales (no-root) deben poder capturar paquetes. Como en el contenedor
-# siempre somos root, respondemos "false" POR ADELANTADO usando
-# debconf-set-selections para que no detenga el build esperando input.
+# Automated Pre-Configuration: Network capturing utilities like Wireshark/Tshark 
+# inherently trigger interactive prompt blocks asking if non-root users should capture 
+# raw packets. Since Docker image builds run headlessly without manual key inputs, 
+# this command pre-seeds the Debian configuration engine database with a default 'true' 
+# answer to guarantee an unblocked, fluid software installation flow.
+# ------------------------------------------------------------------------------
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
