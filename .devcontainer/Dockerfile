@@ -126,11 +126,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     iputils-ping \
     \
-    # === Anonimato: Tor y similares ===
-    # tor = cliente de la red Tor.
-    # torsocks = "envoltorio" que hace pasar cualquier comando por Tor.
-    # proxychains4 = encadena múltiples proxies.
-    # obfs4proxy = ofusca el tráfico de Tor para evadir bloqueos.
+# Tor, Torsocks, Proxychains4 & Obfs4proxy: Anonymity and censorship-circumvention infrastructure. 
+# They enable secure traffic routing, proxy chaining, and protocol obfuscation during network assessments (Ref: BHB Ch. 3).
     tor \
     torsocks \
     proxychains4 \
