@@ -208,5 +208,10 @@ RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Analista-UIDE]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}✗)%f %# '
 EOF
 
+# Runtime Execution Directive:
+# Unlike the 'RUN' instruction which executes tasks during the image building 
+# process, the 'CMD' directive specifies the default program or binary that triggers 
+# automatically when the finished container boots up. In this setup, it launches 
+# an interactive ZSH shell session for the security analyst (Ref: BHB Ch. 3).
 CMD ["/usr/bin/zsh"]
 
