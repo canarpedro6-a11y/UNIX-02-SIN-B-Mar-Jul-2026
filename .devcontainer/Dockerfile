@@ -136,7 +136,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     proxychains4 \
     obfs4proxy \
     \
-    # === Cliente HTTP más legible que curl para aprender ===
+#  A command-line HTTP client designed for making web and API requests with clean, colorized outputs (Ref: BHB Ch. 3).
     httpie \
     \
 # System Localization:
