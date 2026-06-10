@@ -84,10 +84,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     jq \
     \
-    # === Páginas de manual (comando `man`) ===
-    # La imagen base de Kali viene sin documentación para
-    # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
-    # "man grep" es material de consulta obligada.
+# System Documentation & Manual Reference Pages:
+# Utilities that provision and index local command reference manuals and POSIX syntax standards (Ref: BHB Ch. 1).
     man-db \
     manpages \
     manpages-posix \
