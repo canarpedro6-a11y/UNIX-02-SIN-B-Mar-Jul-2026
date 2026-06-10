@@ -27,3 +27,11 @@ else
     # Print that the current user is not root
 fi
 # End the main conditional block
+
+#adduser Messi
+#su - Messi
+#bash check_root\ _function.sh 
+
+
+
+
