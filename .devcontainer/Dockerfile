@@ -103,9 +103,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # === Linter (revisor automático de errores) para scripts Bash ===
     shellcheck \
     \
-    # === Reconocimiento y escaneo de red ===
-    # nmap = el escáner de puertos más famoso.
-    # masscan = escaneo masivo de rangos grandes de IPs.
+   # Network Scanning & Asset Discovery:
+# High-performance utilities used to map network topologies, detect open ports, and audit active services (Ref: BHB Ch. 3).
     nmap \
     masscan \
     \
