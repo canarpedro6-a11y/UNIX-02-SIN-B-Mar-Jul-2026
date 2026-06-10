@@ -1,28 +1,13 @@
 # ============================================================================
-#  Dockerfile — "receta" para construir la imagen del curso
-# ============================================================================
-#  Un Dockerfile es un archivo de texto con instrucciones paso a paso que
-#  Docker (o Codespaces) lee de arriba hacia abajo para fabricar una
-#  "imagen". Una imagen es como un molde congelado de un sistema Linux
-#  listo para usar; cada vez que abres el Codespace, se crea un
-#  "contenedor" a partir de ese molde.
+# Base Image: This instruction initializes the core OS template for our container.
+# We leverage Kali Linux rolling because it natively includes modern, pre-configured 
+# penetration testing and security assessment tools (Ref: Black Hat Bash, Ch. 3).
 #
-#  Analogía: la imagen es el PLANO, el contenedor es la CASA construida
-#  con ese plano. Puedes construir muchas casas iguales a partir de un
-#  solo plano, y si destruyes una casa el plano sigue intacto.
-#
-#  Cada instrucción (FROM, ENV, RUN...) crea una "capa". Docker guarda
-#  esas capas en caché: si no cambias las primeras líneas, no las
-#  reconstruye y el siguiente build es casi instantáneo.
-# ============================================================================
-
-
-# ----------------------------------------------------------------------------
-# FROM: imagen base sobre la que vamos a construir
-# ----------------------------------------------------------------------------
-# En lugar de partir de cero, partimos de la imagen oficial de Kali Linux
-# en su versión "rolling" (actualización continua, siempre al día).
-# Todo lo que instalemos más abajo se apila ENCIMA de esta base.
+# Layer Caching: Docker processes instructions sequentially, mapping each one to a 
+# read-only file layer. If the preceding directives remain untouched, Docker uses 
+# the existing cache. Organizing static foundation layers at the top maximizes 
+# building efficiency and reduces local environment rebuild times.
+# ------------------------------------------------------------------------------
 FROM kalilinux/kali-rolling:latest
 
 
