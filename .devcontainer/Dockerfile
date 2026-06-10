@@ -62,8 +62,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     zsh \
     bash-completion \
     \
-    # === Herramientas de 4ta generación ===
-    # Estas son las protagonistas de las Unidades 2, 3 y 4:
+# Text Processing, Stream Editing & Compilation Automation:
+# Powerful utilities used for pattern matching, inline text transformation, structured data filtering, 
+# and automated binary building from source layouts (Ref: BHB Ch. 1 & Ch. 2).
     perl \
     make \
     gawk \
