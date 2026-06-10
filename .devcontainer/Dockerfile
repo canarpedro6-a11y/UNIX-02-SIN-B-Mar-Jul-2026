@@ -70,13 +70,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     sed \
     grep \
     \
-    # === Utilidades básicas de UNIX ===
-    # coreutils trae cat, ls, head, tail, sort, cut, tr, etc.
-    # findutils trae find y xargs.
-    # procps trae ps, top, kill (gestión de procesos).
-    # less = paginador para leer archivos largos.
-    # tree = muestra directorios como árbol.
-    # jq = procesa JSON desde la línea de comandos.
+# Core Utilities, Process Management & Data Parsers:
+# Essential tools for file manipulation, recursive file hunting, systemic process monitoring, 
+# and structural JSON/text processing (Ref: BHB Ch. 1 & Ch. 2).
     coreutils \
     findutils \
     procps \
