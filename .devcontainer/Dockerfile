@@ -167,25 +167,25 @@ SHELL ["/bin/bash", "-c"]
 # following operations, builds, and runtime terminals start inside this directory.S
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas
+# Version Control Infrastructure:
+# This command configures Git system-wide to treat all directories as safe. 
+# It prevents ownership errors and permission blocks when Docker mounts external 
+# workspaces or repositories into the container (Ref: BHB Ch. 3).
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
  && git lfs install --system
 
 # ----------------------------------------------------------------------------
-# CMD: comando que se ejecuta por defecto al arrancar el contenedor
-# ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-# Prompt del curso para bash
+# Heredoc Redirection & Profile Customization (Block l):
+# The 'cat >> ... <<'EOF'' construct is a 'Here Document' (Heredoc). It is a stream 
+# redirection technique used to append multiple raw formatting lines into a text 
+# file without invoking interactive editors (Ref: BHB Ch. 1). Here, it appends 
+# custom configurations to the user profile (~/.zshrc) to override the color scheme 
+# and prompt layout for better visibility during operations (Ref: BHB Ch. 2).
+# Unlike 'RUN' which executes tasks during image assembly, 'CMD' sets the default 
+# binary that triggers automatically when the finished container boots up. It starts 
+# an interactive bash shell instance for the security analyst.
 RUN cat >> /root/.bashrc <<'EOF'
 # Aquí puedes poner un prompt para bash si quieres
 PS1='\[\e[36m\][Analista-UIDE]\[\e[m\] \w \$ '
