@@ -92,7 +92,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     manpages \
     manpages-posix \
     \
-    # === Red básica y utilidades de descarga ===
+# Base Infrastructure, Version Control & Data Transfer:
+# Core utilities used to download remote assets, manage code repositories with large file tracking, 
+# validate SSL certificates, and handle system localization layout (Ref: BHB Ch. 3).
     curl \
     wget \
     git \
