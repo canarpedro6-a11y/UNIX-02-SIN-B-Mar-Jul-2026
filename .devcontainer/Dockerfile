@@ -100,7 +100,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     locales \
     \
-    # === Linter (revisor automático de errores) para scripts Bash ===
+   # ShellCheck: A static analysis and linting tool used to detect syntax errors, bugs, and security issues in shell scripts (Ref: BHB Ch. 1).
     shellcheck \
     \
    # Network Scanning & Asset Discovery:
