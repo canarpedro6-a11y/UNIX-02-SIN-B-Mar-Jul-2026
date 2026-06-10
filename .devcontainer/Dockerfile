@@ -145,10 +145,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+ # Image Cleanup Optimization:
+# This section cleans up the container's storage footprint by purging cached package 
+# manager assets. 'apt-get clean' clears the local repository of retrieved package 
+# files, and 'rm -rf /var/lib/apt/lists/*' completely wipes the cached package 
+# indexes (Ref: BHB Ch. 3). Executing this destruction within the exact same 'RUN' 
+# layer guarantees that these redundant temporary files are eliminated permanently 
+# before Docker commits and seals the final read-only filesystem layer.
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
