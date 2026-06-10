@@ -115,7 +115,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tcpdump \
     tshark \
     \
-    # === Utilidades de red variadas ===
+    # Networking, Diagnostics & Redirection Tools: 
+# Core utilities used for resolving DNS records, mapping network paths, auditing active ports, 
+# and establishing raw network socket connections (Ref: BHB Ch. 3).
     netcat-traditional \
     socat \
     dnsutils \
