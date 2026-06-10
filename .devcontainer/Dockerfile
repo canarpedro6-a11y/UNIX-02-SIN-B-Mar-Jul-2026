@@ -55,8 +55,11 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 #   hosts and intercept raw network traffic (Ref: BHB Ch. 2 & Ch. 3).
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+
     \
-    # === Editores de texto y shells (intérpretes de comandos) ===
+# Text Editors & Interactive Shell Interfaces:
+# Enhances environment terminal operations, introducing advanced tab-completion capabilities, 
+# dynamic shells, and screen-oriented terminal text editors (Ref: BHB Ch. 1).
     neovim \
     vim \
     zsh \
