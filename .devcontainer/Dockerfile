@@ -109,9 +109,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nmap \
     masscan \
     \
-    # === Captura y análisis de paquetes de red ===
-    # tcpdump = capturador clásico por terminal.
-    # tshark = versión de terminal de Wireshark.
+    # Network Traffic Sniffing & Analysis:
+# Core CLI utilities used to intercept, filter, and dissect live network packets passing through container interfaces (Ref: BHB Ch. 3).
+
     tcpdump \
     tshark \
     \
