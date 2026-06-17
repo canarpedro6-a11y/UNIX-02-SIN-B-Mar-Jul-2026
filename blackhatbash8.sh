@@ -28,4 +28,8 @@ sed '$d' log.txt > newlogL.txt
 
 sed '$d' newlog1.txt > newlogL.txt
 
+sed -n '2,15 p' log.txt
+
+sed -i '1d' log.txt
+
 
