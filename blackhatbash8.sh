@@ -48,3 +48,5 @@ CNTRL Z #stop the process that is being carried out
 
 bg %1 #Now that this job is in the background
 #[1]+ sleep 100 &
+
+nohup ./my_script.sh & #The nohup command will create a file named nohup.out with standardoutput stream data. Make sure you delete this file if you don’t want it on the filesystem.
