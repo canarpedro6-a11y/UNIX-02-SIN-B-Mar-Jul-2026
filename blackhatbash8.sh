@@ -32,4 +32,19 @@ sed -n '2,15 p' log.txt
 
 sed -i '1d' log.txt
 
+sleep 100 &
+#[1] 19104
 
+ps -ef | grep sleep #We can verify that the spawned process is running by using the ps command
+#root           1       0  0 12:26 ?        00:00:00 /bin/sh -c echo Container started trap "exit 0" 15  exec "$@" while sleep 1 & wait $!; do :; done -
+#root       19104    1150  0 13:10 pts/2    00:00:00 sleep 100
+#root       19351       1  0 13:11 ?        00:00:00 sleep 1
+#root       19353    1150  0 13:11 pts/2    00:00:00 grep --color=auto sleep
+
+fg %1 #We can migrate the job from the background to the foreground by issuing the fg command and the job ID:
+#sleep 100
+
+CNTRL Z #stop the process that is being carried out
+
+bg %1 #Now that this job is in the background
+#[1]+ sleep 100 &

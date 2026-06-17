@@ -81,3 +81,4 @@ fi
 
 # Standard output: Prints the final calculated grade string to the terminal interface.
 echo "Final score for branch '$BRANCH_TO_EVALUATE': $SCORE/100"
+
